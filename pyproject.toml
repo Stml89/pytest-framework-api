@@ -1,0 +1,61 @@
+[tool.ruff]
+exclude = [
+    ".venv",
+    "tests"
+]
+output-format = 'github'
+line-length = 120
+
+[tool.mypy]
+install_types = true
+non_interactive = true
+ignore_missing_imports = true
+exclude = [
+    "venv",
+    "tests"
+]
+
+[tool.pylint.MASTER]
+argument-naming-style = "snake_case"
+variable-naming-style = "snake_case"
+function-naming-style = "snake_case"
+method-naming-style = "snake_case"
+module-naming-style = "snake_case"
+ignore-paths = [
+    'venv/*',
+    'tests/*'
+]
+disable = [
+    "raw-checker-failed",
+    "bad-inline-option",
+    "locally-disabled",
+    "file-ignored",
+    "suppressed-message",
+    "useless-suppression",
+    "deprecated-pragma",
+    "use-symbolic-message-instead",
+    "use-implicit-booleaness-not-comparison-to-string",
+    "use-implicit-booleaness-not-comparison-to-zero",
+    "empty-docstring",
+    "missing-module-docstring",
+    "missing-class-docstring",
+    "missing-function-docstring",
+    "no-else-return",
+    "too-few-public-methods"
+]
+
+[tool.flake8]
+max-line-length = 120
+count = true
+statistics = true
+show-source = true
+max-complexity = 10
+exclude = [
+    ".git",
+    "__pycache__",
+    "venv",
+    "tests"
+]
+extend-ignore = [
+    "E501"
+]

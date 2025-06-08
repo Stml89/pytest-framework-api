@@ -1,8 +1,11 @@
 ## About
 
 ---
-This is a simple example of a test automation repository structure.
-Made by Siarhei Stamal for Python Test Automation course
+This is a simple example of a test automation project for testing [Booker broker](https://restful-booker.herokuapp.com/apidoc/), using [Pytest](https://docs.pytest.org/en/stable/),
+and [allure](https://allurereport.org/docs/) for reporting.
+Repository have a general structure to help you organize and create frameworks from scratch.
+
+Made by Siarhei Stamal for Python Test Automation course.
 
 ## Project structure
 
@@ -51,23 +54,36 @@ Made by Siarhei Stamal for Python Test Automation course
 ### How to install
 
 1. Clone this repository
-   + `git clone <URL>`
+```bash
+    $ git clone <URL>
+```
 2. Create virtual environment, activate it:
-   + `pip install virtualenv`
-   + `cd ~/projects/pytest-framework`
-   + `virtualenv venv`
-   + `source venv/bin/activate`
+```bash
+    $ pip install virtualenv
+    $ cd ~/projects/pytest-framework
+    $ virtualenv venv
+    $ source venv/bin/activate
+```
 3. Install dependencies
-    + `pip install -r requirements.txt`
-
+```bash
+    $ pip install -r requirements.txt
+```
 ### How to run tests
 1. To execute ALL tests w/ DEBUG log level
-   + `pytest . --log-level=DEBUG`
+```bash
+    $ pytest . --log-level=DEBUG
+```
 2. To execute ALL API test suite
-   + `pytest . -m api`
+```bash
+    $ pytest . -m login
+```
 
 ### How to [build report](https://allurereport.org/docs/how-it-works/)
-+ `allure serve` or `allure generate`
+```bash
+    $ allure serve
+    or
+    allure generate
+```
 
 ### Available markers:
  + `api - to execute all API test cases`
